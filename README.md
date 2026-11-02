@@ -47,6 +47,6 @@ Frontend and backend are separate applications communicating only through HTTP. 
 Clone the repository and install workspace dependencies from the **root** directory:
 
 ```bash
-git clone https://github.com/<your-org>/transitconnect.git
+git clone https://github.com/yaschilal24/transitconnect.git
 cd transitconnect
 npm install
