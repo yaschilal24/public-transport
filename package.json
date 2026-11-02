@@ -1,0 +1,20 @@
+{
+  "name": "transitconnect",
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "backend"
+  ],
+  "scripts": {
+    "backend:dev": "npm run dev -w backend",
+    "mobile:start": "npm run start -w mobile",
+    "db:migrate": "npm run prisma:migrate -w backend",
+    "db:seed": "npm run prisma:seed -w backend",
+    "test:backend": "npm run test -w backend",
+    "test:mobile": "npm run test -w mobile"
+  },
+  "overrides": {
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  }
+}

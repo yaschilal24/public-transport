@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "TransitConnect",
+    "slug": "transitconnect",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "transitconnect",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.transitconnect.app",
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.transitconnect.app",
+      "supportsTablet": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      ["expo-location", { "locationWhenInUsePermission": "TransitConnect needs your location to show nearby stops." }],
+      ["expo-notifications", { "icon": "./assets/notification-icon.png" }]
+    ],
+    "extra": {
+      "apiBaseUrl": "http://192.168.1.100:4000/api/v1"
+    }
+  }
+}

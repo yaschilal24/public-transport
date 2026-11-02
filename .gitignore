@@ -1,0 +1,47 @@
+node_modules/
+.env
+.env.local
+dist/
+build/
+.expo/
+*.log
+.DS_Store
+backend/prisma/dev.db
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Build files
+build/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Database
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# Backup files
+*.backup
+*.backup.json
+package-lock.failed.json
+package-lock.restored.json
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
