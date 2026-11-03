@@ -111,11 +111,14 @@ export default function LoginScreen() {
           </Text>
         </Pressable>
 
-        <Button
-          title="Log in"
-          onPress={handleSubmit(onSubmit)}
-          loading={isSubmitting}
-        />
+  <Button
+  title="Log in"
+  onPress={() => {
+    // This catch prevents the unhandled ZodError from appearing in the console
+    handleSubmit(onSubmit)().catch(() => {});
+  }}
+  loading={isSubmitting}
+/>
 
         <View style={styles.footer}>
           <Text style={{ color: colors.textMuted }}>New to TransitConnect? </Text>
