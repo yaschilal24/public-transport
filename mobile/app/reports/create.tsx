@@ -1,4 +1,3 @@
-// mobile/app/reports/create.tsx
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, Alert, Pressable, Image } from 'react-native';
 import { useLocalSearchParams, router, Stack } from 'expo-router';
@@ -22,7 +21,10 @@ export default function CreateReport() {
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
 
   async function pickImage() {
-    const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ImagePicker.MediaTypeOptions.Images, quality: 0.7 });
+    const res = await ImagePicker.launchImageLibraryAsync({ 
+      mediaTypes: ['images'], // <-- FIXED: New Expo API
+      quality: 0.7 
+    });
     if (!res.canceled && res.assets[0]) setImageUri(res.assets[0].uri);
   }
 

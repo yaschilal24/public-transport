@@ -17,6 +17,7 @@
     "axios": "^1.7.9",
     "expo": "~57.0.31",
     "expo-constants": "~57.0.22",
+    "expo-dev-client": "~57.0.20",
     "expo-image-picker": "~57.0.20",
     "expo-linking": "~57.0.13",
     "expo-location": "~57.0.22",

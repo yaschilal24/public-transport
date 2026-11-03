@@ -8,12 +8,18 @@
     "userInterfaceStyle": "automatic",
     "android": {
       "package": "com.transitconnect.app",
-      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"],
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "POST_NOTIFICATIONS",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
       "config": {
-  "googleMaps": {
-    "apiKey": "AIzaSyAudWByH4FxqMqFy27d0c0pxkaib4m2NTY"
-  }
-}
+        "googleMaps": {
+          "apiKey": "AIzaSyAudWByH4FxqMqFy27d0c0pxkaib4m2NTY"
+        }
+      }
     },
     "ios": {
       "bundleIdentifier": "com.transitconnect.app",
@@ -22,11 +28,25 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-      ["expo-location", { "locationWhenInUsePermission": "TransitConnect needs your location to show nearby stops." }],
-      ["expo-notifications", { "icon": "./assets/notification-icon.png" }]
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "TransitConnect needs your location to show nearby stops."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png"
+        }
+      ]
     ],
     "extra": {
-      "apiBaseUrl": "http://192.168.1.100:4000/api/v1"
+      "apiBaseUrl": "http://172.16.48.71:4000/api/v1",
+      "router": {},
+      "eas": {
+        "projectId": "e8ed98d1-c50b-4a8a-929b-9a2c2fb63dde"
+      }
     }
   }
 }

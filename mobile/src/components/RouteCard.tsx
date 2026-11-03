@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet, Alert } from 'react-native';
 import { Heart, Pencil, Trash2 } from 'lucide-react-native';
+import { router } from 'expo-router'; // <-- THIS WAS MISSING
 import { useTheme } from '../theme/ThemeContext';
 import { StatusBadge } from './StatusBadge';
-import { api } from '../services/api'; // <-- Import API
-import { useQueryClient } from '@tanstack/react-query'; // <-- Import QueryClient
+import { api } from '../services/api'; 
+import { useQueryClient } from '@tanstack/react-query'; 
 
 interface Props {
   route: any;
@@ -18,7 +19,6 @@ export function RouteCard({ route, onPress, onFavoriteToggle, isFavorite, isAdmi
   const { colors } = useTheme();
   const queryClient = useQueryClient();
 
-  // DELETE ROUTE FUNCTION
   const handleDelete = () => {
     Alert.alert('Delete Route', `Are you sure you want to delete ${route.routeNumber}?`, [
       { text: 'Cancel', style: 'cancel' },
@@ -47,16 +47,17 @@ export function RouteCard({ route, onPress, onFavoriteToggle, isFavorite, isAdmi
           
           {isAdmin && (
             <View style={{ flexDirection: 'row', gap: 12, marginLeft: 4 }}>
+              
               {/* EDIT BUTTON */}
-           <Pressable onPress={() => router.push(`/route/edit/${route.id}`)} hitSlop={12}>
-  
-                  <Pencil color={colors.primary} size={18} />
+              <Pressable onPress={() => router.push(`/route/edit/${route.id}`)} hitSlop={12}>
+                <Pencil color={colors.primary} size={18} />
               </Pressable>
               
               {/* DELETE BUTTON */}
               <Pressable onPress={handleDelete} hitSlop={12}>
                 <Trash2 color={colors.error} size={18} />
               </Pressable>
+
             </View>
           )}
 
