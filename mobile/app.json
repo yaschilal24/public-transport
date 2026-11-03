@@ -8,7 +8,12 @@
     "userInterfaceStyle": "automatic",
     "android": {
       "package": "com.transitconnect.app",
-      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"]
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"],
+      "config": {
+  "googleMaps": {
+    "apiKey": "AIzaSyAudWByH4FxqMqFy27d0c0pxkaib4m2NTY"
+  }
+}
     },
     "ios": {
       "bundleIdentifier": "com.transitconnect.app",
